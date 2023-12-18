@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divClass {
+            border: 3px solid;
+            font-size: 26px;
+            width: 250px;
+            background-color: thistle;
+            display: inline-table;
+            padding: 20px;
+        }
+    </style> 
+</head>
+
+<body>
+    <div class="divClass">
+        Fonrt-end & Back-end Languages
+        <ul id="source">
+            <li data-value="front">HTML5</li>
+            <li data-value="back">Laravel</li>
+            <li data-value="back">PHP</li>
+            <li data-value="front">Bootstrap</li>
+            <li data-value="front">Jquery</li>
+            <li data-value="back">Nodejs</li>
+        </ul>
+    </div>
+
+    <div class="divClass" id="frontend">
+        Front-end
+        <ul id="front">
+
+        </ul>
+    </div>
+
+    <div class="divClass" id="backend">
+        Back-end
+        <ul id="back">
+
+        </ul>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#source li").draggable({
+                helper: 'clone',
+                revert: 'invalid'
+            })
+           
+            $("#frontend").droppable({
+                accept: 'li[data-value="front"]',
+                drop: function (event, ui) {
+                    $("#front").append(ui.draggable);
+                }
+            });
+            $("#backend").droppable({
+                accept: 'li[data-value="back"]',
+                drop: function (event, ui) {
+                    $("#back").append(ui.draggable);
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

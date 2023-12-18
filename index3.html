@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<body>
+    <div class="owl owl-carousel owl-theme">
+        <div class="slide slide1">
+            <div class="slide-content">
+                <h1>This is Slide 1</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde in aperiam eligendi nisi?
+                    Voluptatibus?</p>
+                <button>Read More!</button>
+            </div>
+        </div>
+
+        <div class="slide slide2">
+            <div class="slide-content">
+                <h1>This is Slide 2</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde in aperiam eligendi nisi?
+                    Voluptatibus?</p>
+                <button>Read More!</button>
+            </div>
+        </div>
+
+        <div class="slide slide3">
+            <div class="slide-content">
+                <h1>This is Slide 3</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde in aperiam eligendi nisi?
+                    Voluptatibus?</p>
+                <button>Read More!</button>
+            </div>
+        </div>
+
+        <div class="slide slide4">
+            <div class="slide-content">
+                <h1>This is Slide 4</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde in aperiam eligendi nisi?
+                    Voluptatibus?</p>
+                <button>Read More!</button>
+            </div>
+        </div>
+
+        <div class="slide slide5">
+            <div class="slide-content">
+                <h1>This is Slide 5</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde in aperiam eligendi nisi?
+                    Voluptatibus?</p>
+                <button>Read More!</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items: 3,
+                loop: false,
+                nav: true,
+                dots: false,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                smartSpeed: 1500,
+                autoplayHoverPause: true,
+            })
+        })
+    </script>
+</body>
+</html>
